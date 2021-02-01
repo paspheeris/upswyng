@@ -56,7 +56,11 @@ export const FavoriteResourceFAB = ({ resourceId }: Props) => {
         className={classes.fab}
         aria-label="add"
       >
-        {isFavoriteResource ? <FavoriteIcon /> : <FavoriteBorderIcon />}
+        {isFavoriteResource ? (
+          <FavoriteIcon aria-label="unfavorite" />
+        ) : (
+          <FavoriteBorderIcon aria-label="favorite" />
+        )}
       </Fab>
       <Snackbar
         autoHideDuration={5000}

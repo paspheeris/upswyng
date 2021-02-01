@@ -11,7 +11,6 @@ describe("<FavoriteResourcesFAB/>", () => {
 
   const setup = (resourceId: string) => {
     return render(<FavoriteResourcesFAB resourceId={resourceId} />);
-    /* return { getByText: null }; */
   };
 
   const getFromLocalStorage = () => {

@@ -67,7 +67,7 @@
     "@rollup/plugin-node-resolve": "^6.0.0",
     "@rollup/plugin-replace": "^2.3.0",
     "@rollup/plugin-typescript": "^2.0.1",
-    "@testing-library/jest-dom": "^5.11.9",
+    "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/svelte": "^3.0.3",
     "@types/chart.js": "^2.9.15",
     "@types/express": "^4.17.3",
@@ -130,7 +130,7 @@
     "sync:strappd": "cross-env TARGETS=syncStrappd rollup -c bin.rollup.config.js && node __build__/bin/sync_strappd",
     "test": "run-p -n test:e2e test:unit",
     "test:e2e": "start-server-and-test './src/bin/e2e_setup.sh'  http://localhost:43637/provider 'cypress run' && ./src/bin/e2e_teardown.sh",
-    "test:unit": "jest --passWithNoTests",
+    "test:unit": "jest --passWithNoTests --watch",
     "update:algolia": "cross-env TARGETS=updateAlgolia rollup -c bin.rollup.config.js && node __build__/bin/update_algolia",
     "test:docs": "jest src"
   },

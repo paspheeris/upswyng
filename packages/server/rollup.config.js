@@ -161,6 +161,8 @@ export default {
         include: /node_modules/,
         namedExports: {
           "node_modules/bson/index.js": ["ObjectId"],
+          "lz-string": ["compressToEncodedURIComponent"],
+          "@testing-library/svelte": ["render"],
         },
       }),
       json(),
